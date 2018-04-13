@@ -22,6 +22,20 @@ app.get("/api/result", (_req, res) => {
   });
 });
 
+app.post("/api/nodedata", (_req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
+  const content = parser.scrape().then(data => {
+    res.send(data);
+  });
+});
+
+app.post("/api/nodedata", function(req, res) {
+  var body = req.body;
+  console.log(body);
+});
+
 http
   .createServer(app)
   .listen(app.get("portHttp"), () => console.log(chalk.blue(`Listening on https://localhost:${portHttp}`)));
