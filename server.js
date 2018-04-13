@@ -34,16 +34,23 @@ app.get("/api/results", (_req, res) => {
     nodes: [
       {
         clusterName: "QVS@Cluster",
-        nodeName: "qv12node3",
+        nodeName: "qv12node1",
         statusCode: "Up",
         reason: "",
       },
       {
         clusterName: "QVS@Cluster",
-        nodeName: "qv12node5",
+        nodeName: "qv12node2",
         statusCode: "Up",
         reason: "",
       },
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node3",
+        statusCode: "Up",
+        reason: "",
+      },
+
       {
         clusterName: "QVS@Cluster",
         nodeName: "qv12node4",
@@ -52,13 +59,7 @@ app.get("/api/results", (_req, res) => {
       },
       {
         clusterName: "QVS@Cluster",
-        nodeName: "qv12node1",
-        statusCode: "Up",
-        reason: "",
-      },
-      {
-        clusterName: "QVS@Cluster",
-        nodeName: "qv12node2",
+        nodeName: "qv12node5",
         statusCode: "Up",
         reason: "",
       },
