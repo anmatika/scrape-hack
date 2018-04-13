@@ -15,18 +15,30 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 const portHttp = process.env.PORT_HTTP || DEFAULT_PORT_HTTP;
 
 app.set("portHttp", portHttp);
-app.get("/api/result", (_req, res) => {
+
+let buffer = {};
+
+/* app.get("/api/result", (_req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
   const content = parser.scrape().then(data => {
     res.send(data);
   });
+}); */
+
+app.get("/api/results", (_req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
+  res.send(buffer);
 });
 
 app.post("/api/nodedata", function(req, res) {
   var body = req.body;
   console.log(body);
+  buffer = {};
+  buffer = Object.assign({}, body);
   res.send("http://anttim.northeurope.cloudapp.azure.com:3000");
 });
 
