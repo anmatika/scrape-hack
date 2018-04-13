@@ -10,7 +10,7 @@ const DEFAULT_PORT_HTTP = 3003;
 const app = express();
 app.use(express.static(path.join(__dirname, "./")));
 var bodyParser = require("body-parser");
-/* app.use(bodyParser.json({ type: "application/*+json" })); */
+app.use(bodyParser.json({ type: "application/*+json" }));
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 const portHttp = process.env.PORT_HTTP || DEFAULT_PORT_HTTP;
 
@@ -73,7 +73,7 @@ app.post("/api/nodedata", function(req, res) {
   var body = req.body;
   console.log(body);
   buffer = {};
-  buffer = Object.assign({}, JSON.parse(body));
+  buffer = Object.assign({}, body);
   res.send("http://anttim.northeurope.cloudapp.azure.com:3000");
 });
 
