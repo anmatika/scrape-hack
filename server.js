@@ -66,14 +66,14 @@ app.get("/api/results", (_req, res) => {
     ],
   };
 
-  res.send(JSON.parse(buffer));
+  res.send(buffer);
 });
 
 app.post("/api/nodedata", function(req, res) {
   var body = req.body;
   console.log(body);
   buffer = {};
-  buffer = Object.assign({}, body);
+  buffer = Object.assign({}, JSON.parse(body));
   res.send("http://anttim.northeurope.cloudapp.azure.com:3000");
 });
 
