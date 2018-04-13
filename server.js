@@ -27,7 +27,7 @@ app.get("/api/result", (_req, res) => {
 app.post("/api/nodedata", function(req, res) {
   var body = req.body;
   console.log(body);
-  res.send("OK.");
+  res.send("http://anttim.northeurope.cloudapp.azure.com:3000");
 });
 
 http
