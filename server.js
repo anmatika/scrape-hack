@@ -66,6 +66,8 @@ app.get("/api/results", (_req, res) => {
     ],
   };
 
+  console.log("buffer", buffer);
+
   res.send(buffer);
 });
 
