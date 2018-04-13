@@ -66,7 +66,7 @@ app.get("/api/results", (_req, res) => {
     ],
   };
 
-  res.send(res);
+  res.send(res.body);
 });
 
 app.post("/api/nodedata", function(req, res) {
