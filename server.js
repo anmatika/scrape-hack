@@ -10,7 +10,7 @@ const DEFAULT_PORT_HTTP = 3003;
 const app = express();
 app.use(express.static(path.join(__dirname, "./")));
 var bodyParser = require("body-parser");
-app.use(bodyParser.json()); // support json encoded bodies
+/* app.use(bodyParser.json()); // support json encoded bodies */
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 const portHttp = process.env.PORT_HTTP || DEFAULT_PORT_HTTP;
 
