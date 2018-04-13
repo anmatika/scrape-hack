@@ -31,7 +31,42 @@ app.get("/api/results", (_req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  res.json(JSON.stringify(buffer));
+  const s = {
+    nodes: [
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node3",
+        statusCode: "Up",
+        reason: "",
+      },
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node5",
+        statusCode: "Up",
+        reason: "",
+      },
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node4",
+        statusCode: "Up",
+        reason: "",
+      },
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node1",
+        statusCode: "Up",
+        reason: "",
+      },
+      {
+        clusterName: "QVS@Cluster",
+        nodeName: "qv12node2",
+        statusCode: "Up",
+        reason: "",
+      },
+    ],
+  };
+
+  res.json(s);
 });
 
 app.post("/api/nodedata", function(req, res) {
