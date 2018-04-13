@@ -60,7 +60,7 @@ app.get("/api/results", (_req, res) => {
       {
         clusterName: "QVS@Cluster",
         nodeName: "qv12node5",
-        statusCode: "Up",
+        statusCode: "Down",
         reason: "",
       },
     ],
