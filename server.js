@@ -31,7 +31,7 @@ app.get("/api/results", (_req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  res.json(buffer);
+  res.json(JSON.stringify(buffer));
 });
 
 app.post("/api/nodedata", function(req, res) {
