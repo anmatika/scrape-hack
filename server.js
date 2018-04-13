@@ -68,7 +68,7 @@ app.get("/api/results", (_req, res) => {
 
   console.log("buffer", buffer);
 
-  res.send(buffer);
+  res.json(buffer);
 });
 
 app.post("/api/nodedata", function(req, res) {
